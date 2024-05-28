@@ -1,36 +1,21 @@
-import { useRef } from 'react';
-import styles from './components/home.module.scss';
-import MySection from './components/home';
-import one from './images/cusy.png';
-import two from './images/2.png';
-import three from './images/6.png';
-import four from './images/8.png';
+import * as React from 'react';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './pages/layout.js';
+import Home from './pages/home.js';
+import './styles/home.module.scss';
+import './styles/layout.scss';
 
 
 function App() {
-  const section1 = useRef();
-  const section2 = useRef();
-  const section3 = useRef();
-  const section4 = useRef();
-  function scrollTo(section) {
-    section.current.scrollIntoView({ behavior: "smooth"});
-  }
-
   return (
-    <div className={`container ${styles.container}`}>
-      <div ref={section1} >
-        <MySection image={one} headline={`howd`} scrollTo={scrollTo} goToSectionRef={section2} showArrow={true} />
-      </div>
-      <div ref={section2}>
-        <MySection image={two} headline={`howd`} scrollTo={scrollTo} goToSectionRef={section3} showArrow={true}/>
-      </div>
-      <div ref={section3}>
-        <MySection image={three} headline={`four`} scrollTo={scrollTo} goToSectionRef={section4} showArrow={true}/>
-      </div>
-      <div ref={section4}>
-        <MySection image={four} headline={`sexy`} scrollTo={scrollTo} showArrow={false}/>
-      </div>
-    </div> 
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/home" element={<Home />}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
