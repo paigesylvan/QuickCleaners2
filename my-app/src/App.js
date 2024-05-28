@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './pages/layout.js';
 import Home from './pages/home.js';
-import './styles/home.module.scss';
-import './styles/layout.scss';
 
 
 function App() {

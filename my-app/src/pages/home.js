@@ -1,4 +1,3 @@
-import styles from '../styles/home.module.scss'
 import { useRef } from 'react';
 import one from '../images/cusy.png';
 import two from '../images/2.png';

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles/layout.scss'
 import Logo from '../images/qclogo.png'
 import { Link } from 'react-router-dom';
 
