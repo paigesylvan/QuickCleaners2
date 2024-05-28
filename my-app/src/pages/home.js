@@ -16,7 +16,7 @@ export default function Home() {
     }
 
 return(
-    <div className={`container ${styles.container}`}>
+    <div>
         <div ref={section1} >
             <HomeScroll image={one} headline={`howd`} scrollTo={scrollTo} goToSectionRef={section2} showArrow={true}  />
         </div>
